@@ -5,10 +5,9 @@ from plone.event.interfaces import IOccurrence
 
 class EventView(BrowserView):
 
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
-        self.data = IEventAccessor(context)
+    @property
+    def data(self):
+        return IEventAccessor(self.context)
 
     def __call__(self):
         if IOccurrence.providedBy(self.context):

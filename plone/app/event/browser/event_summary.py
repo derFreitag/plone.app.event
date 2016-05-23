@@ -13,12 +13,12 @@ from zope.contentprovider.interfaces import IContentProvider
 
 class EventSummaryView(BrowserView):
 
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
-        self.data = IEventAccessor(context)
-        self.max_occurrences = 6
-        self.excludes = ['title', ]
+    max_occurrences = 6
+    excludes = ['title', ]
+
+    @property
+    def data(self):
+        return IEventAccessor(self.context)
 
     @property
     def is_occurrence(self):

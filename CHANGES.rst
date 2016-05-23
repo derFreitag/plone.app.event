@@ -10,7 +10,8 @@ Breaking changes:
 
 New features:
 
-- *add item here*
+- Remove initialization code from ``__init__``, which is called for each adapter lookup to reduce unnecessary CPU cycles.
+  [thet]
 
 Bug fixes:
 
