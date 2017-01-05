@@ -33,6 +33,7 @@ def setup_catalog(context):
         emptying-the-indexes-td2302709.html
         https://mail.zope.org/pipermail/zope-cmf/2007-March/025664.html
     """
+    return
     if context.readDataFile('plone.app.event-default.txt') is None:
         return
     portal = context.getSite()

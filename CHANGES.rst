@@ -6,7 +6,10 @@ Changelog
 
 Breaking changes:
 
-- *add item here*
+- Do not install the catalog indexes and columns.
+  On der Freitag's website it takes way too much time when updating to Plone 5,
+  and so far they are not needed.
+  [gforcada]
 
 New features:
 
